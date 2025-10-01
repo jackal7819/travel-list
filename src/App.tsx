@@ -5,11 +5,11 @@ import Stats from './components/Stats';
 
 export default function App() {
 	return (
-		<main>
+		<div className='flex flex-col items-center justify-center min-h-screen'>
 			<Logo />
 			<Form />
 			<PackingList />
 			<Stats />
-		</main>
+		</div>
 	);
 }
