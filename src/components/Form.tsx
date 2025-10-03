@@ -1,6 +1,11 @@
+import type { ItemProps } from './PackingList';
 import { useState } from 'react';
 
-export default function Form() {
+interface FormProps {
+	onAddItem: (item: ItemProps) => void;
+}
+
+export default function Form({ onAddItem }: FormProps) {
 	const [quantity, setQuantity] = useState(1);
 	const [description, setDescription] = useState('');
 
@@ -24,7 +29,7 @@ export default function Form() {
 			packed: false,
 		};
 
-		console.log(newItem);
+		onAddItem(newItem);
 		setQuantity(1);
 		setDescription('');
 	};

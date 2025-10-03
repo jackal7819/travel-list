@@ -1,9 +1,4 @@
-interface ItemProps {
-	id: number;
-	description: string;
-	quantity: number;
-	packed: boolean;
-}
+import type { ItemProps } from './PackingList'
 
 export default function Item({ id, description, quantity, packed }: ItemProps) {
 	return (
