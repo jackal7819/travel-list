@@ -1,8 +1,8 @@
-import type { ItemProps } from './PackingList';
+import type { ItemInterface } from '../App';
 import { useState } from 'react';
 
 interface FormProps {
-	onAddItem: (item: ItemProps) => void;
+	onAddItem: (item: ItemInterface) => void;
 }
 
 export default function Form({ onAddItem }: FormProps) {
