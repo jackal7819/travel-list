@@ -1,6 +1,7 @@
-import type { ItemInterface } from '../App';
 import { useState } from 'react';
+
 import Item from './Item';
+import type { ItemInterface } from '../App';
 
 export interface ItemProps {
 	items: ItemInterface[];

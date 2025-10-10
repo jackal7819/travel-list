@@ -1,5 +1,6 @@
-import type { ItemInterface } from '../App';
 import { useState } from 'react';
+
+import type { ItemInterface } from '../App';
 
 interface FormProps {
 	onAddItem: (item: ItemInterface) => void;

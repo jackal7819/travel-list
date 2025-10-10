@@ -1,8 +1,9 @@
 import { useState } from 'react';
+
 import Form from './components/Form';
 import Logo from './components/Logo';
-import Stats from './components/Stats';
 import PackingList from './components/PackingList';
+import Stats from './components/Stats';
 
 export interface ItemInterface {
 	id: string;
