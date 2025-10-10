@@ -8,7 +8,7 @@ interface ItemProps {
 
 export default function Item({ item, onDeleteItem, onToggleItem }: ItemProps) {
 	return (
-		<li key={item.id} className='flex items-center gap-5'>
+		<li key={item.id} className='flex items-center h-10 gap-5'>
 			<input
 				aria-label='packed'
 				type='checkbox'
