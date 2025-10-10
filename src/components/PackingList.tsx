@@ -4,11 +4,17 @@ import Item from './Item';
 
 export interface ItemProps {
 	items: ItemInterface[];
+	onDeleteItems: () => void;
 	onDeleteItem: (id: string) => void;
 	onToggleItem: (id: string) => void;
 }
 
-export default function PackingList({ items, onDeleteItem, onToggleItem }: ItemProps) {
+export default function PackingList({
+	items,
+	onDeleteItems,
+	onDeleteItem,
+	onToggleItem,
+}: ItemProps) {
 	const [sortBy, setSortBy] = useState('input');
 
 	const sortedItems =
@@ -41,6 +47,13 @@ export default function PackingList({ items, onDeleteItem, onToggleItem }: ItemP
 					<option value='description'>Sort by description</option>
 					<option value='packed'>Sort by packed status</option>
 				</select>
+				<button
+					type='button'
+					className='w-40 text-2xl font-semibold text-center duration-500 bg-yellow-100 border-4 border-transparent rounded-full cursor-pointer h-14 hover:border-amber-900 active:bg-amber-900 active:text-white'
+					onClick={onDeleteItems}
+				>
+					Clear list
+				</button>
 			</div>
 		</div>
 	);

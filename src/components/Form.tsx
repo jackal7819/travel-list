@@ -63,7 +63,7 @@ export default function Form({ onAddItem }: FormProps) {
 			/>
 			<button
 				type='submit'
-				className='w-32 text-2xl font-semibold text-center uppercase duration-500 bg-yellow-100 border-4 border-transparent rounded-full cursor-pointer h-14 hover:border-amber-900 active:bg-amber-900 active:text-white'
+				className='w-32 text-2xl font-semibold text-center duration-500 bg-yellow-100 border-4 border-transparent rounded-full cursor-pointer h-14 hover:border-amber-900 active:bg-amber-900 active:text-white'
 			>
 				Add
 			</button>

@@ -22,6 +22,10 @@ export default function App() {
 		setItems((items) => items.filter((item) => item.id !== id));
 	};
 
+	const handleDeleteItems = () => {
+		setItems([]);
+	};
+
 	const handleToggleItem = (id: string) => {
 		setItems((items) =>
 			items.map((item) => (item.id === id ? { ...item, packed: !item.packed } : item))
@@ -34,6 +38,7 @@ export default function App() {
 			<Form onAddItem={handleAddItem} />
 			<PackingList
 				items={items}
+				onDeleteItems={handleDeleteItems}
 				onDeleteItem={handleDeleteItem}
 				onToggleItem={handleToggleItem}
 			/>
